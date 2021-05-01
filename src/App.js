@@ -1,16 +1,21 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+
 import React from "react"
-import functionalComp from "./functionalComp"
-function App() {
-  return (
-    <div>
-      <p>hello</p>
-      <functionalComp></functionalComp>
-    </div>
-    
-  );
-  
-}
+import NewComp from "./components/NewComp"
+ class App extends React.Component{
+   styles={
+     fontStyle:"bold",
+     color:"teal"
+   }
+   render(){
+     return(
+                 <div className="App">
+                   <h1 style={this.styles}> HI</h1>
+                   <NewComp></NewComp>
+                 </div>
+     )
+   }
+ }
 
 export default App;
